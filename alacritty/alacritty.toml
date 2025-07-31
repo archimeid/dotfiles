@@ -1,0 +1,136 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[window]
+padding = { x = 8, y = 6 }
+dynamic_padding = true
+opacity = 1
+option_as_alt = "OnlyLeft"
+
+[font]
+size = 14
+normal = { family = "Mononoki Nerd Font", style = "Regular" }
+bold = { family = "Mononoki Nerd Font", style = "Bold" }
+italic = { family = "Mononoki Nerd Font", style = "Italic" }
+bold_italic = { family = "Mononoki Nerd Font", style = "BoldItalic" }
+
+[env]
+TERM = "xterm-256color"
+
+[keyboard]
+bindings = [
+  { key = ")",      mods = "Command", action = "ResetFontSize"    },
+  { key = "Equals", mods = "Command", action = "IncreaseFontSize" },
+  { key = "Plus",   mods = "Command", action = "IncreaseFontSize" },
+  { key = "Minus",  mods = "Command", action = "DecreaseFontSize" },
+  { key = "Paste",                    action = "Paste"            },
+  { key = "Copy",                     action = "Copy"             },
+  { key = "V",      mods = "Command", action = "Paste"            },
+  { key = "C",      mods = "Command", action = "Copy"             },
+  { key = "F",      mods = "Command", action = "ToggleFullscreen" },
+  { key = "Q",      mods = "Command", action = "Quit"             },
+
+  #############################################################################################
+  #                            Overriding all default keybinding
+  #############################################################################################
+
+  { key = "L",        mods = "Control",                      action = "ReceiveChar" },
+  { key = "N",        mods = "Control|Shift",                action = "ReceiveChar" },
+  { key = "PageUp",   mods = "Shift",         mode = "~Alt", action = "ReceiveChar" },
+  { key = "PageDown", mods = "Shift",         mode = "~Alt", action = "ReceiveChar" },
+  { key = "Home",     mods = "Shift",         mode = "~Alt", action = "ReceiveChar" },
+  { key = "End",      mods = "Shift",         mode = "~Alt", action = "ReceiveChar" },
+
+  # Vi Mode
+  { key = "Space",  mods = "Shift|Control", mode = "~Search",    action = "ReceiveChar" },
+  { key = "Space",  mods = "Shift|Control", mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Escape",                         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "I",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "I",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "C",      mods = "Control",       mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Y",      mods = "Control",       mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "E",      mods = "Control",       mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "G",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "G",      mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "B",      mods = "Control",       mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "F",      mods = "Control",       mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "U",      mods = "Control",       mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "D",      mods = "Control",       mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Y",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Y",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Copy",                           mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "V",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "V",      mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "V",      mods = "Control",       mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "V",      mods = "Alt",           mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Return",                         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "K",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "J",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "H",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "L",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Up",                             mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Down",                           mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Left",                           mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Right",                          mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Key0",                           mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Key4",   mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Key6",   mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "H",      mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "M",      mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "L",      mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "B",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "W",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "E",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "B",      mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "W",      mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "E",      mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Key5",   mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Slash",                          mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Slash",  mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "N",                              mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "N",      mods = "Shift",         mode = "Vi|~Search", action = "ReceiveChar" },
+
+  # Search Mode
+  { key = "Return",                         mode = "Search|Vi",  action = "ReceiveChar" },
+  { key = "Escape",                         mode = "Search",     action = "ReceiveChar" },
+  { key = "C",      mods = "Control",       mode = "Search",     action = "ReceiveChar" },
+  { key = "U",      mods = "Control",       mode = "Search",     action = "ReceiveChar" },
+  { key = "W",      mods = "Control",       mode = "Search",     action = "ReceiveChar" },
+  { key = "P",      mods = "Control",       mode = "Search",     action = "ReceiveChar" },
+  { key = "N",      mods = "Control",       mode = "Search",     action = "ReceiveChar" },
+  { key = "Up",                             mode = "Search",     action = "ReceiveChar" },
+  { key = "Down",                           mode = "Search",     action = "ReceiveChar" },
+  { key = "Return",                         mode = "Search|~Vi", action = "ReceiveChar" },
+  { key = "Return", mods = "Shift",         mode = "Search|~Vi", action = "ReceiveChar" },
+
+  # (Windows, Linux, and BSD only)
+  { key = "V",              mods = "Control|Shift", mode = "~Vi",        action = "ReceiveChar" },
+  { key = "C",              mods = "Control|Shift",                      action = "ReceiveChar" },
+  { key = "F",              mods = "Control|Shift", mode = "~Search",    action = "ReceiveChar" },
+  { key = "B",              mods = "Control|Shift", mode = "~Search",    action = "ReceiveChar" },
+  { key = "C",              mods = "Control|Shift", mode = "Vi|~Search", action = "ReceiveChar" },
+  { key = "Insert",         mods = "Shift",                              action = "ReceiveChar" },
+  { key = "Key0",           mods = "Control",                            action = "ReceiveChar" },
+  { key = "Equals",         mods = "Control",                            action = "ReceiveChar" },
+  { key = "Plus",           mods = "Control",                            action = "ReceiveChar" },
+  { key = "NumpadAdd",      mods = "Control",                            action = "ReceiveChar" },
+  { key = "Minus",          mods = "Control",                            action = "ReceiveChar" },
+  { key = "NumpadSubtract", mods = "Control",                            action = "ReceiveChar" },
+
+  # (Windows only)
+  { key = "Return",   mods = "Alt",           action = "ReceiveChar" },
+
+  # (macOS only)
+  { key = "K",              mods = "Command",         mode = "~Vi|~Search", action = "ReceiveChar"      },
+  { key = "NumpadAdd",      mods = "Command",                               action = "ReceiveChar"      },
+  { key = "NumpadSubtract", mods = "Command",                               action = "ReceiveChar"      },
+  { key = "C",              mods = "Command",         mode = "Vi|~Search",  action = "ReceiveChar"      },
+  { key = "H",              mods = "Command",                               action = "ReceiveChar"      },
+  { key = "H",              mods = "Command|Alt",                           action = "ReceiveChar"      },
+  { key = "M",              mods = "Command",                               action = "ReceiveChar"      },
+  { key = "W",              mods = "Command",                               action = "ReceiveChar"      },
+  { key = "N",              mods = "Command",                               action = "ReceiveChar"      },
+  { key = "F",              mods = "Command",         mode = "~Search",     action = "ReceiveChar"      },
+  { key = "B",              mods = "Command",         mode = "~Search",     action = "ReceiveChar"      }
+]
