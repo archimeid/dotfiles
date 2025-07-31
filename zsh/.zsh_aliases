@@ -1,0 +1,28 @@
+# Globals
+alias ll="ls -l"
+alias la="ls -la"
+alias vim="nvim"
+alias tree="eza -T"
+alias treedf="eza -T--group-directories-first"
+alias treeg="eza -T --git-ignore"
+alias treedfg="eza -T --group-directories-first --git-ignore"
+
+# Git Aliases
+alias gitc="git commit"
+alias gitch="git log --oneline --no-abbrev-commit | gum filter | cut -d' ' -f1"
+alias gitcf='git commit --fixup="$(gitch)"'
+alias gitck="git checkout"
+alias gitp="git pull"
+function gitcmf() {
+  git commit --fixup="$1"
+}
+alias gitf="git fetch"
+alias gitri="git rebase -i"
+alias gitria="git rebase -i --autosquash"
+alias gitl="git log --graph --pretty=oneline"
+alias gitu="git fetch && git pull"
+
+# Source extra aliases if they exist
+if [[ -f "$ZDOTDIR/.zsh_extra_aliases" ]]; then
+  source "$ZDOTDIR/.zsh_extra_aliases"
+fi

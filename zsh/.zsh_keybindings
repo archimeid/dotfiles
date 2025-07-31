@@ -1,0 +1,8 @@
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^[^K" describe-key-briefly
+
+# Source extra keybindings if they exist
+if [[ -f "$ZDOTDIR/.zsh_extra_keybindings" ]]; then
+  source "$ZDOTDIR/.zsh_extra_keybindings"
+fi

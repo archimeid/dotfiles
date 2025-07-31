@@ -1,0 +1,11 @@
+.zhistory
+.zsh_history
+.zsh_sessions/**
+.zcompcache/**
+.zcompdump
+
+# Do not save work stuff
+.zsh_extra_aliases
+.zsh_extra_config
+.zsh_extra_env
+.zsh_extra_keybindings
