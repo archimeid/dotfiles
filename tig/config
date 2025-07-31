@@ -1,0 +1,4 @@
+color cursor	black blue  bold
+color title-focus	black blue  bold
+
+bind generic 9 +@sh -c "printf '%s' $(git rev-parse --short %(commit)) | pbcopy && echo Copied %(commit) to clipboard"
