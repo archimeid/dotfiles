@@ -1,0 +1,10 @@
+# Ignore work tools
+.jira/
+akamai/
+containers/
+gh/
+helm/
+skhd/
+
+.DS_Store
+.edgerc
